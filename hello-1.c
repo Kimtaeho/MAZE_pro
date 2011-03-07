@@ -1,18 +1,13 @@
 #include <linux/module.h>
-#include <linux.kernel.h>
-#include <linux/init.h>
-
-static int __init hello_2_init(void)
+#include <linux/kernel.h>
+int init_module (void)
 {
-    printk(KERN_INFO "Hello, world 2\n");
+    printk(KERN_INFO "Hello world 1.\n");
     return 0;
 }
 
-static void __exit hello_2_exit(void)
+void cleanup_module (void)
 {
-    printk(KERN_INFO "Goodbye, world 2\n");
+    printk(KERN_INFO "Goodbye world 1.\n");
 }
-
-module_init(hello_2_init);
-module_exit(hello_2_exit);
 
