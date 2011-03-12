@@ -4,6 +4,7 @@ obj-m += hello-3.o
 obj-m += hello-4.o
 obj-m += hello-5.o
 obj-m += startstop.o
+obj-m += chardev.o
 startstop-objs := start.o stop.o
 
 all:
